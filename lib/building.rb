@@ -18,4 +18,12 @@ class Building
     total = avg_rent / @units.count
     total.to_f
   end
+
+  def renter_with_highest_rent
+    @units.each do |unit|
+      if !(unit = nil)
+        #want to check each unit against each other to see which has highest rent?
+    end
+  end
+
 end
