@@ -11,13 +11,11 @@ class Building
   end
 
   def average_rent
-    avg_rent = 0
+    avg_rent = 0.0
     @units.each do |unit|
       avg_rent += unit.monthly_rent
     end
-    # require "pry"; binding.pry
     total = avg_rent / @units.count
-    total
+    total.to_f
   end
-
 end
