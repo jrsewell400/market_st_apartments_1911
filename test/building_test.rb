@@ -23,6 +23,12 @@ class BuildingTest < Minitest::Test
   end
 
   def test_units_can_be_added
-    
+    @building.add_unit(@unit1)
+    @building.add_unit(@unit2)
+    assert_equal [@unit1, @unit2], @building.units
+  end
+
+  def test_calculate_avg_monthly_rent
+    assert_equal 1099.5, @building.average_rent
   end
 end
